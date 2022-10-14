@@ -1,4 +1,8 @@
 #include <stdio.h>
+/**
+  *main - This prints the text found therein
+  *Return: This returns o
+  */
 
 int main(void)
 {
