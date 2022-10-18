@@ -1,10 +1,9 @@
-#include <stdio.h>
 #include "main.h"
 
 /**
- *main - alphabet print
+ *main - check the code for Holberton School students.
  *Description - function prints lower case
- *Return: returns 0
+ *Return: Always 0.
 */
 
 int main(void)
