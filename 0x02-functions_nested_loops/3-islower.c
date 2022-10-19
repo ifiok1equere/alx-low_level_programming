@@ -2,7 +2,7 @@
 #include "main.h"
 
 /**
-  *_islower(int c);
+  *_islower(int c) - checks for lowercase
   *Description - checks lowercase
   *Return: retrns 0
 */
@@ -14,11 +14,11 @@ int _islower(int c)
 
 	if (islower(c))
 	{
-		return e;
+		return (e);
 	}
 	else
 	{
-		return d;
+		return (d);
 	}
 }
 
