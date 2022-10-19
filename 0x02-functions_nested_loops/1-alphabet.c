@@ -1,10 +1,10 @@
 #include "main.h"
 
 /**
- *main - check the code for Holberton School students.
- *Description - the function prints lower case.
- *Return: Always 0.
-*/
+ *print_alphabet - check the code
+ *Description - function
+ * Return: Always 0.
+ */
 
 void print_alphabet(void)
 {
