@@ -2,7 +2,7 @@
 
 /**
   *_abs - absolute value function
-  *@int: function gets an integer parameter
+  *@i: function gets an integer parameter
   *Description - function computes abs values
   *Return: Always 0
   */
