@@ -2,7 +2,8 @@
 #include "main.h"
 
 /**
-  *_islower(int c) - checks for lowercase
+  *_islower - checks for lowercase
+  *@c: character parameter
   *Description - checks lowercase
   *Return: retrns 0
 */
