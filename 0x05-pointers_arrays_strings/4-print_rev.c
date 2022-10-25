@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
-   * main - check the code
+   * print_rev - check the code
     *@s: parameter
      * Return: Always nothing
  */
@@ -18,18 +18,6 @@ void print_rev(char *s)
 		len++;
 		v++;
 	}
-
-	/*for (j = len - 1; j < len; j--)
-	{
-		if (s[j] != '\0')
-		{
-			_putchar(s[j]);
-		}
-		else
-		{
-			break;
-		}
-	}*/
 
 	len = len - 1;
 
