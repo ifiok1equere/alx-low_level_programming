@@ -22,15 +22,15 @@ int _strcmp(char *s1, char *s2)
 			{
 				l = 15;
 				return (l);
-				break;
 			}
 
 			else
 			{
 				l = -1 * 15;
 				return (l);
-				break;
 			}
+
+			break;
 		}
 	}
 
