@@ -2,11 +2,12 @@
 #include <string.h>
 
 /**
-    *_strcat - function to cat strings
-      *@dest: 1st param
-        *@src: 2nd param
-	  *Return: return a character
-	  */
+    *_strncat - function to cat strings
+    *@dest: 1st param
+    *@src: 2nd param
+    *@n: 3rd param
+    *Return: return a character
+*/
 
 char *_strncat(char *dest, char *src, int n)
 {
