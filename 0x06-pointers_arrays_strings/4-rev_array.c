@@ -1,7 +1,8 @@
 #include "main.h"
 #include <string.h>
 
-/**reverse_array - reverse engineering
+/**
+  *reverse_array - reverse engineering
   *@a: 1st parameter
   *@n: 2nd parameter
   *Return: always nothing
