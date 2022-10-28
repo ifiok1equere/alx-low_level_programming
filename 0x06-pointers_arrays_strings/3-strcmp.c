@@ -17,9 +17,9 @@ int _strcmp(char *s1, char *s2)
 
 	i = strlen(s1);
 	j = strlen(s2);
-	
+
 	if (i > j)
-	{ 
+	{
 		k = i;
 	}
 	else
