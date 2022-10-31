@@ -10,14 +10,14 @@
 
 char *_strchr(char *s, char c)
 {
-	char *ptr;
+	/*char *ptr;*/
 	unsigned int i;
 
 	for (i = 0; i <= strlen(s); i++)
 	{
 		if (*(s + i) == c)
 		{
-			ptr = &(*(s + i));
+			s = &(*(s + i));
 			break;
 		}
 		else
@@ -26,5 +26,5 @@ char *_strchr(char *s, char c)
 		}
 	}
 
-	return (char *) ptr;
+	return (s);
 }
