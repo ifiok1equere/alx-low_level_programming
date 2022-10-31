@@ -3,8 +3,8 @@
 
 /**
     *_memset - function fills memory with a constant byte
-    *@s: pointer to buffer array
-    *@b: constant byte
+    *@dest: pointer to buffer array
+    *@src: constant byte
     *@n: memory byte size factor
     *Return: returns a pointer
 */
