@@ -2,7 +2,7 @@
 #include <string.h>
 
 /**
-    *_memset - function fills memory with a constant byte
+    *_memcpy - function fills memory with a constant byte
     *@dest: pointer to buffer array
     *@src: constant byte
     *@n: memory byte size factor
