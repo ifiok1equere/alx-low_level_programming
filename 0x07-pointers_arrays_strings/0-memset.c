@@ -2,7 +2,7 @@
 #include <string.h>
 
 /**
-    *memset: function fills memory with a constant byte
+    *_memset - function fills memory with a constant byte
     *@s: pointer to buffer array
     *@b: constant byte
     *@n: memory byte size factor
@@ -11,9 +11,9 @@
 
 char *_memset(char *s, char b, unsigned int n)
 {
-        unsigned int i;
+	unsigned int i;
 
-	for (i = 0; i <= n; i++)
+	for (i = 0; i < n; i++)
 	{
 		*(s + i) = b;
 	}
