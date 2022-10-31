@@ -13,7 +13,7 @@ char *_strchr(char *s, char c)
 	char *ptr;
 	unsigned int i;
 
-	for (i = 0; i <= strlen(s) + 2; i++)
+	for (i = 0; i <= strlen(s); i++)
 	{
 		if (*(s + i) == c)
 		{
@@ -27,4 +27,5 @@ char *_strchr(char *s, char c)
 	}
 
 	return (ptr);
+	return ('\0');
 }
