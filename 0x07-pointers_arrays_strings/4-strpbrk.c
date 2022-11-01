@@ -5,7 +5,7 @@
   *_strpbrk - string search
   *@s: param 1
   *@accept: prame 2
-  *Return: pointer 
+  *Return: pointer
 */
 
 char *_strpbrk(char *s, char *accept)
@@ -23,10 +23,10 @@ char *_strpbrk(char *s, char *accept)
 			if (*(accept + j) == *(s + i))
 			{
 				ptr = &(*(s + i));
-				
+
 				return (ptr);
 			}
-			
+
 		}
 
 	}
