@@ -10,21 +10,22 @@
 
 char *_strchr(char *s, char c)
 {
-	/*char *ptr;*/
+	char *ptr = "NULL";
 	unsigned int i;
 
 	for (i = 0; i <= strlen(s); i++)
 	{
 		if (*(s + i) == c)
 		{
-			s = &(*(s + i));
+			ptr = &(*(s + i));
 			break;
 		}
 		else
 		{
 			continue;
 		}
+	
 	}
 
-	return (s);
+	return (ptr);
 }
