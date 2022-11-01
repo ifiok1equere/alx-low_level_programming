@@ -24,7 +24,7 @@ char *_strchr(char *s, char c)
 		{
 			continue;
 		}
-	
+
 	}
 
 	return (ptr);
