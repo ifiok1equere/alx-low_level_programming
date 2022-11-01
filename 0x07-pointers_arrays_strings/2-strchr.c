@@ -10,15 +10,15 @@
 
 char *_strchr(char *s, char c)
 {
-	char *ptr = "NULL";
+	char *ptr;
 	unsigned int i;
 
 	for (i = 0; i <= strlen(s); i++)
 	{
 		if (*(s + i) == c)
 		{
-			ptr = &(*(s + i));
-			break;
+			ptr = (s + i);
+			return (ptr);
 		}
 		else
 		{
@@ -27,5 +27,5 @@ char *_strchr(char *s, char c)
 
 	}
 
-	return (ptr);
+	return (NULL);
 }
