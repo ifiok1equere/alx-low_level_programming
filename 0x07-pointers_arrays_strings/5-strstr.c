@@ -2,9 +2,9 @@
 #include <string.h>
 
 /**
-  *_strpbrk - string search
-  *@s: param 1
-  *@accept: prame 2
+  *_strstr - string search
+  *@haystack: param 1
+  *@needle: prame 2
   *Return: pointer
   */
 
