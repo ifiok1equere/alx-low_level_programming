@@ -13,7 +13,7 @@ int reverse_check(char *s, int i, int j)
 {
 	if (*(s + j) == *(s + i))
 	{
-		if (j < (i / 2))
+		if (j <= (i / 2))
 		{
 			return (reverse_check(s, --i, ++j));
 		}
