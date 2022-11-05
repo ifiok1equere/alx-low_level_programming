@@ -3,8 +3,8 @@
 
 /**
   *main - argc func
-  *@argc - cml argument count
-  *@argv - pointer to cml string arguments
+  *@argc: cml argument count
+  *@argv: pointer to cml string arguments
   *
   *Return: an integer
   */
