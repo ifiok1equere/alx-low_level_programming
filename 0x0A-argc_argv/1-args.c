@@ -1,7 +1,7 @@
 #include "main.h"
 #include <string.h>
-
-
+#include <stdlib.h>
+#include <stdio.h>
 /**
   *main - argc func
   *@argc: cml argument count
@@ -13,8 +13,7 @@
 int main(int argc, char *argv[])
 {
 	(void)argv;
-	_putchar(argc + '0');
-	_putchar('\n');
+	printf("%d\n", argc);
 
 	return (0);
 }
