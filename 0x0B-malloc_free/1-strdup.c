@@ -12,7 +12,6 @@ char *_strdup(char *str)
 	char *ptr;
 	unsigned int i;
 	unsigned int size;
-	char *dest;
 
 	size = strlen(str);
 
@@ -22,15 +21,13 @@ char *_strdup(char *str)
 	}
 	else
 	{
-		strcpy(dest, str);
-
 		ptr = (char *)malloc(sizeof(char) * size);
 
 		if (ptr != NULL)
 		{
 			for (i = 0; i < size; i++)
 			{
-				*(ptr + i) = *(dest + i);
+				*(ptr + i) = *(str + i);
 			}
 
 			*(ptr + size) = '\0';
