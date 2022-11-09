@@ -19,15 +19,12 @@ char *_strdup(char *str)
 	{
 		return (NULL);
 	}
-	else if (str == NULL)
-	{
-		return (str);
-	}
+
 	else
 	{
 		ptr = (char *)malloc(sizeof(char) * size + 1);
-
-		if (ptr != NULL)
+		
+		if (ptr != NULL && str != NULL)
 		{
 			for (i = 0; i < size; i++)
 			{
