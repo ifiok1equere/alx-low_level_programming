@@ -21,16 +21,19 @@ char *_strdup(char *str)
 	}
 	else
 	{
-		ptr = (char *)malloc(sizeof(char) * size);
+		ptr = (char *)malloc(sizeof(char) * size + 1);
 
-		if (ptr != NULL && str != NULL)
+		if (ptr != NULL)
 		{
-			for (i = 0; i < size; i++)
+			if (str != NULL)
 			{
-				*(ptr + i) = *(str + i);
-			}
+				for (i = 0; i < size; i++)
+				{
+					*(ptr + i) = *(str + i);
+				}
 
-			*(ptr + size) = '\0';
+				*(ptr + size) = '\0';
+			}
 		}
 		else
 		{
