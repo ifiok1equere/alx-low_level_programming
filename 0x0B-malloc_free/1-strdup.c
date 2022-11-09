@@ -14,33 +14,22 @@ char *_strdup(char *str)
 	unsigned int i;
 	unsigned int size;
 
+	i = 0;
 	size = strlen(str);
+	
 	/*printf("%d: ", size);*/
 
-	if (size == 0)
+	if (!(ptr = (char *)malloc(sizeof(char) * size + 1)))
 	{
 		return (NULL);
 	}
-	else
+	while (*str)
 	{
-		ptr = (char *)malloc(sizeof(char) * size + 1);
-
-		if (ptr)
-		{
-			for (i = 0; i < size; i++)
-			{
-				*(ptr + i) = *(str + i);
-			}
-
-			*(ptr + size) = '\0';
-		}
-		else
-		{
-			return (NULL);
-		}
-
-		return (ptr);
+		ptr[i++] = *str++;
 	}
+	ptr[i] = '\0';
+	
+	return (ptr);
 
 	free(ptr);
 }
