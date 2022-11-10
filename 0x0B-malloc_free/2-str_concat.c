@@ -1,6 +1,6 @@
 #include <string.h>
 #include <stdlib.h>
-#include <stdio.h>
+/*#include <stdio.h>*/
 #include "main.h"
 
 /**
@@ -20,46 +20,66 @@ char *str_concat(char *s1, char *s2)
 	{
 		return (NULL);
 	}
-	
-	len1 = strlen(s1);
-	len2 = strlen(s2);
-	size = len1 + len2;
-
-
-	/*printf("len1 = %d, len2 = %d, size = %d", len1, len2, size);*/
-
-	if (size == 0)
+	else if (s1 == NULL && s2 != NULL)
 	{
-		return (NULL);
+		size = strlen(s2);
 	}
-	
+	else if (s1 != NULL && s2 == NULL)
+	{
+		size = strlen(s1);
+	}
+	else
+	{
+		len1 = strlen(s1);
+		len2 = strlen(s2);
+		size = len1 + len2;
+	}
+
+
+	/*printf("size = %d\n", size);*/
+
 	ptr = (char *)malloc(sizeof(char) * size + 1);
 	
 	if (ptr != NULL)
 	{
-		if (s1 != NULL)
+		if (s2 == NULL)
 		{
-			for (j = 0; j < len1; j++)
+			for (j = 0; j <= size; j++)
 			{
 				*(ptr + j) = *(s1 + j);
 			}
-		}
 
-		if (s2 != NULL)
+	}
+
+		else if (s1 == NULL)
 		{
-			for (j = 0; j < len2; j++)
+			for (j = 0; j <= size; j++)
+			{
+				*(ptr + j) = *(s2 + j);
+			}
+			
+		}
+		else
+		{
+			for (j = 0; j <= len1; j++)
+			{
+				*(ptr + j) = *(s1 + j);
+			}
+
+			for (j = 0; j <= len2; j++)
 			{
 				*(ptr + len1 + j) = *(s2 + j);
 			}
-		}
 
-		*(ptr + size) = '\0';
+		}
 	}
 	else
 	{
 		return (NULL);
 	}
-		
+	
+	*(ptr + size) = '\0';
+
 	return (ptr);
 
 	free(ptr);
