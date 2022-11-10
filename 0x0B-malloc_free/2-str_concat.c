@@ -37,13 +37,20 @@ char *str_concat(char *s1, char *s2)
 	
 	if (ptr != NULL)
 	{
-		for (j = 0; j < len1; j++)
+		if (s1 != NULL)
 		{
-			*(ptr + j) = *(s1 + j);
+			for (j = 0; j < len1; j++)
+			{
+				*(ptr + j) = *(s1 + j);
+			}
 		}
-		for (j = 0; j < len2; j++)
+
+		if (s2 != NULL)
 		{
-			*(ptr + len1 + j) = *(s2 + j);
+			for (j = 0; j < len2; j++)
+			{
+				*(ptr + len1 + j) = *(s2 + j);
+			}
 		}
 
 		*(ptr + size) = '\0';
@@ -52,7 +59,8 @@ char *str_concat(char *s1, char *s2)
 	{
 		return (NULL);
 	}
-		return (ptr);
+		
+	return (ptr);
 
 	free(ptr);
 }
