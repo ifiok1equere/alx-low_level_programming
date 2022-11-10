@@ -16,11 +16,7 @@ char *str_concat(char *s1, char *s2)
 	unsigned int len1, len2, j;
 	unsigned int size;
 
-	if (s1 == NULL)
-	{
-		return (NULL);
-	}
-	if (s2 == NULL)
+	if (s1 == NULL && s2 == NULL)
 	{
 		return (NULL);
 	}
