@@ -2,7 +2,7 @@
 
 /**
   *print_name - name printing function
-  *@name - pointer to name param
+  *@name: pointer to name param
   *@f: function pointer parameter
   *Return: returns -1
 */
