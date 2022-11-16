@@ -1,5 +1,6 @@
 #include "function_pointers.h"
 #include <stdio.h>
+
 /**
   *int_index - search function
   *@array: pointer to array
@@ -21,11 +22,7 @@ int int_index(int *array, int size, int (*cmp)(int))
 	{
 		if (cmp(array[i]))
 		{
-			printf("%d\n", cmp(array[i]));
-		}
-		else
-		{
-			i++;
+			return (i);
 		}
 	}
 	
