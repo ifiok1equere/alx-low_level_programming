@@ -17,31 +17,25 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 
 	va_start(all_them, n);
 
-	/*if (n == 0)
-		;
-	else
-	{*/
-
-		for (i = 0; i < n; i++)
+	for (i = 0; i < n; i++)
+	{
+		if (separator != NULL)
 		{
-			if (separator != NULL)
+			if (i < n - 1)
 			{
-				if (i < n - 1)
-				{
-					printf("%d%s", va_arg(all_them, int), separator);
-				}
-				else
-				{
-					printf("%d", va_arg(all_them, int));
-				}
+				printf("%d%s", va_arg(all_them, int), separator);
 			}
 			else
 			{
 				printf("%d", va_arg(all_them, int));
 			}
 		}
-		printf("%c", '\n');
-	/*}*/
+		else
+		{
+			printf("%d", va_arg(all_them, int));
+		}
+	}
+	printf("%c", '\n');
 
 	va_end(all_them);
 }
