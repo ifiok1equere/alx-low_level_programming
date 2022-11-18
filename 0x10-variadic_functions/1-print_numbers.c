@@ -17,10 +17,10 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 
 	va_start(all_them, n);
 
-	if (n == 0)
+	/*if (n == 0)
 		;
 	else
-	{
+	{*/
 
 		for (i = 0; i < n; i++)
 		{
@@ -40,8 +40,8 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 				printf("%d", va_arg(all_them, int));
 			}
 		}
-			printf("%c", '\n');
-	}
+		printf("%c", '\n');
+	/*}*/
 
 	va_end(all_them);
 }
