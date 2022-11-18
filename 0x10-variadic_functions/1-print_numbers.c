@@ -5,12 +5,12 @@
 
 /**
   *print_numbers - printing function
-  *@n: param 1
+  *@separator: para 1
+  *@n: param 2
   *Return: return -1
 */
 
-void print_numbers(const char *separator,\
-		const unsigned int n, ...)
+void print_numbers(const char *separator, const unsigned int n, ...)
 {
 	unsigned int i;
 	va_list all_them;
@@ -24,10 +24,9 @@ void print_numbers(const char *separator,\
 
 		for (i = 0; i < n; i++)
 		{
-			if (i < n-1)
+			if (i < n - 1)
 			{
-				printf("%d%s",\
-				va_arg(all_them, int), separator);
+				printf("%d%s", va_arg(all_them, int), separator);
 			}
 			else
 			{
