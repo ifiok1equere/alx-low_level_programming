@@ -33,17 +33,27 @@ void print_strings(const char *separator, const unsigned int n, ...)
 				printf("%s", p);
 			}
 		}
-		else if (separator == NULL && p != NULL)
-		{
-			printf("%s", p);
-		}
-		else if (separator != NULL && p == NULL)
-		{
-			printf("%s%s", "(nil)", separator);
-		}
 		else
 		{
-			printf("%s", "(nil)");
+			if (i < n - 1)
+			{
+				if (separator == NULL && p != NULL)
+				{
+					printf("%s", p);
+				}
+				else if (separator != NULL && p == NULL)
+				{
+					printf("%s%s", "(nil)", separator);
+				}
+				else
+				{
+					printf("%s", "(nil)");
+				}
+			}
+			else
+			{
+				printf("%s", p);
+			}
 		}
 	}
 
