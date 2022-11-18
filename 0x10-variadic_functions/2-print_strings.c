@@ -2,14 +2,12 @@
 #include <stdarg.h>
 #include <stdlib.h>
 #include <stdio.h>
-
 /**
   *print_strings - printing function
   *@separator: para 1
   *@n: param 2
   *Return: return -1
 */
-
 void print_strings(const char *separator, const unsigned int n, ...)
 {
 	unsigned int i;
@@ -38,7 +36,14 @@ void print_strings(const char *separator, const unsigned int n, ...)
 		}
 		else
 		{
-			printf("%s", p);
+			if (p != NULL)
+			{
+				printf("%s", p);
+			}
+			else
+			{
+				printf("%s", "(nil)");
+			}
 		}
 	}
 	printf("%c", '\n');
