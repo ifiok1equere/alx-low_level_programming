@@ -31,13 +31,9 @@ void print_strings(const char *separator, const unsigned int n, ...)
 			{
 				printf("%s", p);
 			}
-			else if (separator != NULL && p == NULL)
+			if (separator != NULL && p == NULL)
 			{
 				printf("%s%s", "(nil)", separator);
-			}
-			else
-			{
-				printf("%s", "(nil)");
 			}
 		}
 		else
