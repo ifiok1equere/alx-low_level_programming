@@ -17,47 +17,34 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	char *p;
 
 	va_start(all_them, n);
-
 	for (i = 0; i < n; i++)
 	{
 		p = va_arg(all_them, char *);
 
-		if (separator != NULL && p != NULL)
+		if (i < n - 1)
 		{
-			if (i < n - 1)
+			if (separator != NULL && p != NULL)
 			{
 				printf("%s%s", p, separator);
 			}
-			else
+			if (separator == NULL && p != NULL)
 			{
 				printf("%s", p);
+			}
+			else if (separator != NULL && p == NULL)
+			{
+				printf("%s%s", "(nil)", separator);
+			}
+			else
+			{
+				printf("%s", "(nil)");
 			}
 		}
 		else
 		{
-			if (i < n - 1)
-			{
-				if (separator == NULL && p != NULL)
-				{
-					printf("%s", p);
-				}
-				else if (separator != NULL && p == NULL)
-				{
-					printf("%s%s", "(nil)", separator);
-				}
-				else
-				{
-					printf("%s", "(nil)");
-				}
-			}
-			else
-			{
-				printf("%s", p);
-			}
+			printf("%s", p);
 		}
 	}
-
 	printf("%c", '\n');
-
 	va_end(all_them);
 }
