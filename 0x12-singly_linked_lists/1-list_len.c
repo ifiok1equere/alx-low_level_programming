@@ -3,7 +3,7 @@
 #include <stdio.h>
 
 /**
-  *print_list - print element function
+  *list_len - print element function
   *@h: node
   *Return: unsigned integer
  */
