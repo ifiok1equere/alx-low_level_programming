@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
-  *print_before_main - function to print before main
+  *print_before_m - function to print before main
   *
   *Return: void
 */
