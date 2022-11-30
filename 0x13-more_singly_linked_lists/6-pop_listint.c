@@ -4,10 +4,9 @@
 #include "lists.h"
 
 /**
-  * add_node - adds a new node to the first node
+  *pop_listint - adds a new node to the first node
   *@head: head pointer to the first node
-  *@str: string element
-  * Return: returns a pointer of type list_t
+  *Return: returns a pointer of type list_t
 */
 
 int pop_listint(listint_t **head)
