@@ -26,7 +26,7 @@ void print_binary(unsigned long int n)
 	while (n > 0)
 	{
 		dec_num = n >> 1;
-		rem = n - (2 * dec_num);
+		rem = n - (dec_num << 1);
 		bin_num = bin_num + (rem * num);
 		num = num * 10;
 
