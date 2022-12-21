@@ -16,7 +16,7 @@ void print_binary(unsigned long int n)
 
 	num = 1;
 	bin_num = 0;
-	
+
 	if (n == 0)
 	{
 		printf("%lu", n);
