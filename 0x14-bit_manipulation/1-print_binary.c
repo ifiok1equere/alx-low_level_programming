@@ -12,26 +12,24 @@
 
 void print_binary(unsigned long int n)
 {
-	unsigned long int dec_num, rem;
+	unsigned long int dec_num, bin_num, num, rem;
 
-	/*num = 1;
-	bin_num = 0;*/
+	num = 1;
+	bin_num = 0;
 
-	/*if (n == 0)
+	if (n == 0)
 	{
-		printf("%lu", n);
+		_putchar('0');
 		return;
-	}*/
+	}
 
 	while (n > 0)
 	{
 		dec_num = n >> 1;
 		rem = n - (dec_num << 1);
-		/*bin_num = bin_num + (rem * num);
-		num = num * 10;*/
-		printf("%lu", rem);
+		bin_num = bin_num + (rem * num);
+		num = num * 10;
+		_putchar(rem + '0');
 		n = n >> 1;
 	}
-
-	/*printf("%lu", bin_num);*/
 }
