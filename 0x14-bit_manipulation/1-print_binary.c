@@ -17,11 +17,11 @@ void print_binary(unsigned long int n)
 	/*num = 1;
 	bin_num = 0;*/
 
-	if (n == 0)
+	/*if (n == 0)
 	{
 		printf("%lu", n);
 		return;
-	}
+	}*/
 
 	while (n > 0)
 	{
@@ -30,7 +30,6 @@ void print_binary(unsigned long int n)
 		/*bin_num = bin_num + (rem * num);
 		num = num * 10;*/
 		printf("%lu", rem);
-
 		n = n >> 1;
 	}
 
