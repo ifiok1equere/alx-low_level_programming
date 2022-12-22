@@ -19,7 +19,7 @@ void print_binary(unsigned long int n)
 
 	if (n == 0)
 	{
-		_putchar(0 + '0');
+		putchar('0');
 		return;
 	}
 
@@ -29,7 +29,7 @@ void print_binary(unsigned long int n)
 		rem = n - (dec_num << 1);
 		bin_num = bin_num + (rem * num);
 		num = num * 10;
-		_putchar(rem + '0');
+		putchar(rem + '0');
 		n = n >> 1;
 	}
 }
