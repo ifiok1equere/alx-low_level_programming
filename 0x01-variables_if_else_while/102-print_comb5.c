@@ -7,15 +7,7 @@
  */
 int main(void)
 {
-	int num1 = 0;
-	int num2 = 0;
-	int num3 = 0;
-	int num4 = 1;
-
-	int num5 = 1;
-	int num6 = 2;
-	/*int num7 = 3;
-	int num8 = 4;*/
+	int num1 = 0, num2 = 0, num3 = 0, num4 = 1, num_4 = 1;
 
 	while (num1 <= 9)
 	{
@@ -30,25 +22,26 @@ int main(void)
 					putchar(' ');
 					putchar(num3 + '0');
 					putchar(num4 + '0');
-					if (num2 == 8)
-					{
-						putchar('\n');
-						return (0);
-					}
 					putchar(',');
 					putchar(' ');
 					num4 += 1;
 				}
-				num4 = 0;
+				if (num3 == 9)
+				{
+					num_4 += 1;
+					num4 = num_4;
+				}
+				else
+				{
+					num4 = 0;
+				}
 				num3 += 1;
 			}
-			num5 += 1;
-			num6 += 1;
-			num2 = num5;
-			num3 = num6;
-			num4 = num6;
-			num1 += 1;
+			num3 = 0;
+			num2 += 1;
 		}
+		num2 = 0;
+		num1 += 1;
 	}
 	return (0);
 }
