@@ -11,7 +11,7 @@ int main(void)
 
 	while (num1 <= 9)
 	{
-		while (num2 < 9)
+		while (num2 <= 9)
 		{
 			while (num3 <= 9)
 			{
