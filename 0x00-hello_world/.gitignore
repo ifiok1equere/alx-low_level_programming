@@ -1,2 +1,7 @@
 main.c
 c
+a.out
+main.o
+main.s
+size32
+size64
