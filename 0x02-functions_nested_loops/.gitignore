@@ -3,6 +3,14 @@
 2-alphabet_x10
 3-islower
 4-isalpha
+5-sign
+6-abs
+7-last_digit
+8-24
+9-times_table
+10-add
+11-98
+100-times_table
 1-main.c
 2-main.c
 3-main.c
@@ -11,3 +19,7 @@
 6-main.c
 7-main.c
 8-main.c
+9-main.c
+10.main.c
+11-main.c
+100-main.c
