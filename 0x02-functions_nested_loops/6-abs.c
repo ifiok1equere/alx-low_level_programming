@@ -6,7 +6,6 @@
  *
  * Return: returns interger
  */
-
 int _abs(int n)
 {
 	if (n == 0)
