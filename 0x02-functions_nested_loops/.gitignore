@@ -2,6 +2,7 @@
 1-alphabet
 2-alphabet_x10
 3-islower
+4-isalpha
 1-main.c
 2-main.c
 3-main.c
