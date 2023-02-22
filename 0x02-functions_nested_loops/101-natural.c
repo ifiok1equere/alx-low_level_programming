@@ -10,8 +10,8 @@ void natural_num1024(void);
 
 int main(void)
 {
-        natural_num1024();
-        return (0);
+	natural_num1024();
+	return (0);
 }
 
 /**
