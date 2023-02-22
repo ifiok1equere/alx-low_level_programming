@@ -1,5 +1,4 @@
 #include "main.h"
-
 /**
  * times_table - function prints the 9-times table
  *
@@ -7,7 +6,7 @@
  */
 void times_table(void)
 {
-	char i = 0, j = 0, k;
+	int i = 0, j = 0, k;
 
 	while (i <= 9)
 	{
