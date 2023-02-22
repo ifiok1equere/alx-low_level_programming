@@ -1,6 +1,20 @@
 #include <stdio.h>
 
 /**
+ * main - check the code.
+ *
+ * Return: Always 0.
+ */
+
+void natural_num1024(void);
+
+int main(void)
+{
+        natural_num1024();
+        return (0);
+}
+
+/**
  * natural_num1024 - function computes sum of all the multiples of 3/5 < 1024
  *
  * Return: void
