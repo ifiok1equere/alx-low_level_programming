@@ -15,8 +15,6 @@ long int largest_number(long int a, long int b, long int c)
 	if (a == b && a == c)
 		return;
 
-
-
 	if (a > b && a > c)
 	{
 		largest = a;
