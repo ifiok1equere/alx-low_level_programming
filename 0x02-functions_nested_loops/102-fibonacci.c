@@ -26,12 +26,12 @@ void fibonacci_50(void)
 	printf("%ld, %ld, ", prev, cur);
 	next = prev + cur;
 
-	while (i <= 50)
+	while (i < 48)
 	{
 		prev = cur;
 		cur = next;
 		next = prev + cur;
-		if (i < 50)
+		if (i < 47)
 		{
 			printf("%ld, ", next);
 		}
