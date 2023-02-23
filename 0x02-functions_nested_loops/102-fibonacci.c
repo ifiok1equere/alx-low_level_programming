@@ -23,8 +23,8 @@ void fibonacci_50(void)
 {
 	long prev = 1, cur = 2, next, i = 1;
 
-	printf("%ld, %ld, ", prev, cur);
 	next = prev + cur;
+	printf("%ld, %ld, %ld, ", prev, cur, next);
 
 	while (i < 48)
 	{
