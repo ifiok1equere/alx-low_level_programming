@@ -36,6 +36,6 @@ void prime_factor(long int n)
  */
 int main(void)
 {
-    prime_factor(612852475143);
-    return (0);
+	prime_factor(612852475143);
+	return (0);
 }
