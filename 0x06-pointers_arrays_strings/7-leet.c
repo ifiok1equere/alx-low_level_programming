@@ -26,12 +26,6 @@ char *leet(char *c)
 			{
 				c[i] = s[m] + '0';
 			}
-			else
-			{
-				l += 2;
-				m++;
-				continue;
-			}
 			m++;
 			l += 2;
 		}
