@@ -14,16 +14,11 @@
 
 int _strcmp(char *s1, char *s2)
 {
-	int len1 = 0, len2 = 0;
-
-	len1 = strlen(s1);
-	len2 = strlen(s2);
-
-	if (len1 > len2)
+	if (s1[0] > s2[0])
 	{
 		return (s1[0] - s2[0]);
 	}
-	else if (len1 < len2)
+	else if (s1[0] < s2[0])
 	{
 		return (s1[0] - s2[0]);
 	}
