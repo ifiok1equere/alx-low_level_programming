@@ -20,6 +20,8 @@ char *cap_string(char *c)
 	{
 		k++;
 	}
+	if (c[0] >= 'a' && c[0] <= 'z')
+		c[0] -= 32;
 
 	while (l < k)
 	{
