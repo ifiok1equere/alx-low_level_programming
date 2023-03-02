@@ -1,5 +1,6 @@
 #include "main.h"
 #include <string.h>
+#include <stdio.h>
 
 /**
  * _strcmp - function compares two strings and returns an integer depending on
@@ -14,23 +15,35 @@
 
 int _strcmp(char *s1, char *s2)
 {
-	int i = 0;
+	unsigned i = 0, m = 0;
+
+	m = strlen(s1);
 
 	while (s1[i])
 	{
-		if (s1[i] > s2[i])
+		if (s1[i] == s2[i])
 		{
-			return (s1[i] - s2[i]);
-		}
-		else if (s1[i] < s2[i])
-		{
-			return (s1[i] - s2[i]);
+			if (i < m)
+			{
+				i++;
+				continue;
+			}
+			else
+			{
+				break;
+			}
 		}
 		else
 		{
-			return (0);
+			if (s1[i] > s2[i])
+			{
+				return (s1[i] - s2[i]);
+			}
+			else if (s1[i] < s2[i])
+			{
+				return (s1[i] - s2[i]);
+			}
 		}
-		i++;
 	}
 
 	return (0);
