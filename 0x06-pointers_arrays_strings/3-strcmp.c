@@ -15,7 +15,7 @@
 
 int _strcmp(char *s1, char *s2)
 {
-	unsigned i = 0, m = 0;
+	unsigned int i = 0, m = 0;
 
 	m = strlen(s1);
 
