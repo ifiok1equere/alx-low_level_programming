@@ -18,10 +18,6 @@ int main(void)
    */
   *(&n + 5) = 98;
   /* ...so that this prints 98\n */
-  printf("Address of variable n = %p\n", (void *)&n);
-  printf("Address of array a[] = %p\n", (void *)&a[2]);
-  printf("Address of pointer p = %p\n", (void *)&p);
-
   printf("a[2] = %d\n", a[2]);
   return (0);
 }
