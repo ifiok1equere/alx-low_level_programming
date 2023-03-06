@@ -17,7 +17,6 @@ char *_strchr(char *s, char c)
 	unsigned int i;
 
 	for (i = 0; i <= strlen(s); i++)
-
 	{
 		if (*s == c)
 		{
@@ -25,5 +24,5 @@ char *_strchr(char *s, char c)
 		}
 		s++;
 	}
-	return (NULL);
+	return (s);
 }
