@@ -13,8 +13,6 @@
 
 char *_strchr(char *s, char c)
 {
-	/*unsigned int i;*/
-
 	for (; *s != '\0';)
 
 	{
@@ -25,5 +23,5 @@ char *_strchr(char *s, char c)
 		s++;
 	}
 
-	return (NULL);
+	return (s);
 }
