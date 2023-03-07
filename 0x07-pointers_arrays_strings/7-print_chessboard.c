@@ -17,11 +17,11 @@ void print_chessboard(char (*a)[8])
 	{
 		while (j <= 8)
 		{
-			printf("%c",a[i][j]);
+			_putchar(a[i][j]);
 			j++;
 			if (j == 8)
 			{
-				printf("\n");
+				_putchar('\n');
 				break;
 			}
 		}
