@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
  * set_string - function prints the sum of the 2 diagonals of a sqaure
@@ -13,5 +12,5 @@
 
 void set_string(char **s, char *to)
 {
-
+	*s = to;
 }
