@@ -28,7 +28,7 @@ int main(int argc, char *argv[])
 		}
 		else if (atoi(argv[i]) < 0)
 		{
-			add += (atoi(argv[i]) * -1);
+			add += (atoi(argv[i]));
 		}
 		else
 		{
