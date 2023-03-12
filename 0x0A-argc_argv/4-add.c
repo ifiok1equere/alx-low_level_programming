@@ -21,14 +21,14 @@ int main(int argc, char *argv[])
 	}
 	while (i < argc)
 	{
-
 		if (*argv[i] >= 48 && *argv[i] <= 57)
 		{
 			add += atoi(argv[i]);
 		}
 		else if (atoi(argv[i]) < 0)
 		{
-			add += (atoi(argv[i]));
+			printf("%d\n", atoi(argv[i - 1]));
+			return (0);
 		}
 		else
 		{
