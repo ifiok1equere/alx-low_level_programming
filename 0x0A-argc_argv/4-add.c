@@ -27,8 +27,7 @@ int main(int argc, char *argv[])
 		}
 		else if (atoi(argv[i]) < 0)
 		{
-			printf("%d\n", atoi(argv[i - 1]));
-			return (0);
+			add += 0;
 		}
 		else
 		{
