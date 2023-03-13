@@ -16,20 +16,14 @@ char *str_concat(char *s1, char *s2)
 
 	if (s1 == NULL)
 	{
-		len1 = 1;
-	}
-	else
-	{
-		len1 = strlen(s1);
+		s1 = "";
 	}
 	if (s2 == NULL)
 	{
-		len2 = 1;
+		s2 = "";
 	}
-	else
-	{
-		len2 = strlen(s2);
-	}
+	len1 = strlen(s1);
+	len2 = strlen(s2);
 	len = len1 + len2;
 	ptr = (char *)malloc(sizeof(char) * (len + 1));
 	if (ptr == NULL)
