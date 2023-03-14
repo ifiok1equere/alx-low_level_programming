@@ -3,7 +3,7 @@
 #include <string.h>
 
 /**
- * alloc_grid - function returns a pointer to a 2 dimensional array of integers.
+ * alloc_grid - function returns a pointer to a 2d-array of integers.
  * @width: the number of columns of the 2d-array.
  * @height: the number of rows of the 2d-array.
  *
@@ -13,13 +13,16 @@ int **alloc_grid(int width, int height)
 {
 	int **ptr, i = 0, j = 0;
 
-	if (width == 0 || height == 0)
+	if (width <= 0 || height <= 0)
 	{
 		return (NULL);
 	}
 	ptr = (int **)malloc(sizeof(int *) * width);
 	if (ptr == NULL)
+	{
+		free(ptr);
 		return (NULL);
+	}
 	while (i < width)
 	{
 		ptr[i] = (int *)malloc(sizeof(int) * height);
@@ -38,6 +41,13 @@ int **alloc_grid(int width, int height)
 	}
 	else
 	{
+		i = 0;
+		while (i < width)
+		{
+			free(ptr[i]);
+			i++;
+		}
+		free(ptr);
 		return (NULL);
 	}
 }
