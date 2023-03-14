@@ -42,7 +42,8 @@ int **alloc_grid(int width, int height)
 			k++;
 		}
 		free(ptr);
-		return (NULL);
+		ptr = NULL;
+		return (ptr);
 	}
 	else
 		return (ptr);
