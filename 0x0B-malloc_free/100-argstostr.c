@@ -19,15 +19,16 @@ char *argstostr(int ac, char **av)
 	{
 		return (NULL);
 	}
-	for (i = 1; i < ac; i++)
+	for (i = 0; i < ac; i++)
 	{
 		total_str_count += strlen(av[i]);
 	}
+	printf("%d\n", total_str_count);
 	ptr = (char *)malloc((sizeof(char) * total_str_count) + 1);
 	if (ptr == NULL)
 		return (NULL);
 
-	for (j = 1; j < ac; j++)
+	for (j = 0; j < ac; j++)
 	{
 		while (av[j][k] != '\0')
 		{
