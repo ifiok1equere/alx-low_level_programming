@@ -6,7 +6,7 @@
  * @age: struct object element age
  * @owner: struct object element owner
  *
- * Description: this function initializes a variable of type struct dog.
+ * Return: void.
  */
 
 void init_dog(struct dog *d, char *name, float age, char *owner)
