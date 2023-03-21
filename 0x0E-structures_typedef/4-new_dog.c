@@ -14,6 +14,7 @@
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *ptr;
+	unsigned int i;
 
 	if ((name == NULL) | (owner == NULL))
 		return (NULL);
@@ -31,9 +32,17 @@ dog_t *new_dog(char *name, float age, char *owner)
 
 	if (ptr->name && ptr->owner)
 	{
-		strcpy(ptr->name, name);
+		for (i = 0; i < strlen(name); i++)
+		{
+			ptr->name[i] = name[i];
+		}
+		ptr->name[i + 1] = '\0';
+		for (i = 0; i < strlen(owner); i++)
+		{
+			ptr->owner[i] = owner[i];
+		}
+		ptr->owner[i + 1] = '\0';
 		ptr->age = age;
-		strcpy(ptr->owner, owner);
 	}
 	else
 	{
