@@ -2,12 +2,12 @@
 #include <stdlib.h>
 
 /**
- * array_iterator - function executes another funtion
+ * int_index - function searches for an integer
  * @array: 1st parameter
  * @size: 2nd parameter
- * @action: 3rd parameter
+ * @cmp: 3rd parameter
  *
- * Return: void
+ * Return:array index position of the integer searched for.
  */
 
 int int_index(int *array, int size, int (*cmp)(int))
