@@ -2,14 +2,12 @@
 #include <stdarg.h>
 #include <stdio.h>
 #include <string.h>
-
 /**
  * print_all - function prints all arguments of different types
  * @format: parameter representing format(datatype) of argument to be printed.
  *
  * Return: void
  */
-
 void print_all(const char * const format, ...)
 {
 	va_list arg;
@@ -20,36 +18,34 @@ void print_all(const char * const format, ...)
 
 	while (format[i] != '\0')
 	{
-		switch (format[i])
+		if (format[i] == 'c')
 		{
-			case 'c':
-				printf("%c", va_arg(arg, int));
-				break;
-			case 'i':
-				printf("%d", va_arg(arg, int));
-				break;
-			case 'f':
-				printf("%f", va_arg(arg, double));
-				break;
-			case 's':
-				ptr =  va_arg(arg, char *);
-				if (ptr == NULL)
-				{
-					printf("(nil)");
-					break;
-				}
-				else
-				{
-					printf("%s", ptr);
-					break;
-				}
+			printf("%c", va_arg(arg, int));
+		}
+		else if (format[i] == 'i')
+		{
+			printf("%d", va_arg(arg, int));
+		}
+		else if (format[i] == 'f')
+		{
+			printf("%f", va_arg(arg, double));
+		}
+		else if (format[i] == 's')
+		{
+			ptr =  va_arg(arg, char *);
+			if (ptr == NULL)
+			{
+				printf("(nil)");
+			}
+			else
+			{
+				printf("%s", ptr);
+			}
 		}
 		if (i < (strlen(format) - 1) && (format[i] == 'c'
 					|| format[i] == 'i' || format[i] == 'f'
 					|| format[i] == 's'))
-		{
 			printf(", ");
-		}
 		i++;
 	}
 	printf("\n");
