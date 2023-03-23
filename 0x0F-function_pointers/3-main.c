@@ -2,6 +2,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+/**
+ * main - function prints the result of a user computation
+ * @argc: the CLI argument count
+ * @argv: array of strings entered on the CLI by user
+ *
+ * Return: 0 for success
+ */
 
 int main(int argc, char *argv[])
 {
