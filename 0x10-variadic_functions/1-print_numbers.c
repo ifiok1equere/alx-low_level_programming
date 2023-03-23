@@ -4,6 +4,8 @@
 
 /**
  * print_numbers - function prints numbers
+ * @separator: parameter representing the string to be printed
+ * between numbers
  * @n: parameter representing the number of arguments to be printed
  *
  * Return: void
