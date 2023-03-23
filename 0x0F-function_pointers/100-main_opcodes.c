@@ -14,6 +14,9 @@ int main(int argc, char *argv[])
 	int i;
 	char *ptr;
 
+	if (argv == NULL)
+		exit(3);
+
 	if (argc != 2)
 	{
 		printf("Error\n");
