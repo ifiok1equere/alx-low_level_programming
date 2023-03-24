@@ -15,7 +15,6 @@ void print_all(const char * const format, ...)
 	char *ptr;
 
 	va_start(arg, format);
-
 	while (format[i] != '\0')
 	{
 		if (format[i] == 'c')
@@ -33,14 +32,13 @@ void print_all(const char * const format, ...)
 		else if (format[i] == 's')
 		{
 			ptr =  va_arg(arg, char *);
-			if (ptr == NULL)
+			switch (*ptr)
 			{
-				printf("(nil)");
+				case '\0':
+					printf("(nil)");
+					break;
 			}
-			else
-			{
-				printf("%s", ptr);
-			}
+			printf("%s", ptr);
 		}
 		if (i < (strlen(format) - 1) && (format[i] == 'c'
 					|| format[i] == 'i' || format[i] == 'f'
