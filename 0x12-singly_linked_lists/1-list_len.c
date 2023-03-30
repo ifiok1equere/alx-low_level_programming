@@ -3,7 +3,7 @@
 #include <stdio.h>
 
 /**
- * print_list - function prints all the elements of a linked list
+ * list_len - function counts elements (i.e.nodes) of a linked list
  * @h: pointer of type list_t to head node of linked list
  *
  * Return: unsigned int (number of nodes)
