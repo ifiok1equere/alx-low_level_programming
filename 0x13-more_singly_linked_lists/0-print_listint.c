@@ -13,13 +13,14 @@ size_t print_listint(const listint_t *h)
 	const listint_t *ptr;
 	size_t i = 0;
 
-	if(h == NULL)
+	if (h == NULL)
 		return (1);
 
-	for(ptr = h; ptr != NULL; ptr = ptr->next)
+	for (ptr = h; ptr != NULL; ptr = ptr->next)
 	{
 		printf("%d\n", ptr->n);
 		i++;
 	}
+	free (ptr);
 	return (i);
 }
