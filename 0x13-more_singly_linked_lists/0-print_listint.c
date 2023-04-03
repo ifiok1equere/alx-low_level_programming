@@ -10,7 +10,6 @@
  */
 size_t print_listint(const listint_t *h)
 {
-	const listint_t *ptr;
 	size_t i = 0;
 
 	if (h == NULL)
@@ -19,11 +18,9 @@ size_t print_listint(const listint_t *h)
 		return (1);
 	}
 
-	ptr = NULL;
-
-	for (ptr = h; ptr != NULL; ptr = ptr->next)
+	for (; h != NULL; h = h->next)
 	{
-		printf("%d\n", ptr->n);
+		printf("%d\n", h->n);
 		i++;
 	}
 	return (i);
