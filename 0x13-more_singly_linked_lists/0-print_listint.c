@@ -16,7 +16,7 @@ size_t print_listint(const listint_t *h)
 	{
 		printf("Error\n");
 		return (0);
-	}i
+	}
 
 	for (; h != NULL; h = h->next)
 	{
