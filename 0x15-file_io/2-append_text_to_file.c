@@ -5,7 +5,7 @@
 #include <unistd.h>
 #include <string.h>
 /**
- * append_text - function appends text to a file
+ * append_text_to_file - function appends text to a file
  * @filename: absolute path to text file
  * @text_content: string to be appended to file.
  *
@@ -19,7 +19,9 @@ int append_text_to_file(const char *filename, char *text_content)
 
 		fd = open(filename, O_WRONLY | O_APPEND);
 		if (fd == -1)
+		{
 			return (-1);
+		}
 		else
 		{
 			if (text_content != NULL)
