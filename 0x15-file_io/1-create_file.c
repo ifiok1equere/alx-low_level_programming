@@ -22,24 +22,24 @@ int create_file(const char *filename, char *text_content)
 		{
 			fd1 = creat(filename, 0600);
 			if (fd1 == -1)
-				return (0);
+				return (-1);
 			if (text_content != NULL)
 			{
 				w_count = write(fd1, text_content, strlen(text_content));
 				if (w_count == -1)
-					return (0);
+					return (-1);
 			}
 		}
 		else
 		{
 			fd1 = open(filename, O_CREAT | O_WRONLY | O_TRUNC);
 			if (fd1 == -1)
-				return (0);
+				return (-1);
 			if (text_content != NULL)
 			{
 				w_count = write(fd1, text_content, strlen(text_content));
 				if (w_count == -1)
-					return (0);
+					return (-1);
 			}
 		}
 		close(fd);
