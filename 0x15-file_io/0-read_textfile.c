@@ -4,7 +4,7 @@
 #include <fcntl.h>
 #include <unistd.h>
 /**
- * read_textfile - function that reads a text file and prints it to the POSIX standard output.
+ * read_textfile - function that reads a text file and prints to stdout
  * @filename: absolute path to text file
  * @letters: number of bytes of letters to be read and printed
  *
