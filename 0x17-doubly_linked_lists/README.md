@@ -1,4 +1,4 @@
-In this project, we continue with our understanding of linked lists with focus
+In this project, we continue to depeen our understanding of linked lists with focus
 on doubly linked lists.
 
 The following are the requirements and objectives for this project:
