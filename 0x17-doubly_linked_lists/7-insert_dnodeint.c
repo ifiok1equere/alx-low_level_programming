@@ -21,10 +21,14 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		count++;
 		ptr = ptr->next;
 	}
-	if (idx > count - 1)
+	if (idx == count)
+	{
+		new_node = add_dnodeint_end(h, n);
+		return (new_node);
+	}
+	if (idx > count)
 		return (NULL);
 	ptr = *h;
-
 	new_node = malloc(sizeof(dlistint_t));
 	if (new_node == NULL)
 		return (NULL);
