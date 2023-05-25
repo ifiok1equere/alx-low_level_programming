@@ -1,7 +1,6 @@
 #ifndef MAIN_H
 #define MAIN_H
 #include <stdio.h>
-#include <stdlib.h>
 
 int _putchar(char c);
 int _islower(int c);
@@ -10,11 +9,11 @@ int _abs(int n);
 int _isupper(int c);
 int _isdigit(int c);
 int _strlen(char *s);
-int add(int, int);
-int sub(int, int);
-int div(int, int);
-int mul(int, int);
-int mod(int, int);
+int add(int a, int b);
+int sub(int a, int b);
+int div(int a, int b);
+int mul(int a, int b);
+int mod(int a, int b);
 void _puts(char *s);
 char *_strcpy(char *dest, char *src);
 int _atoi(char *s);
