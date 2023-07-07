@@ -71,6 +71,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	{
 		if (strcmp(current_index_item->key, key) == 0)
 		{
+			free(current_index_item->value);
 			strcpy(ht->array[index]->value, value);
 			free(pair->key);
 			free(pair->value);
