@@ -47,7 +47,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	hash_node_t *current_index_item;
 	hash_node_t *pair;
 
-	if (!ht || !key || !value)
+	if (!ht || !key)
 		return (0);
 	if (strlen(key) == 0)
 		return (0);
