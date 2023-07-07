@@ -18,15 +18,19 @@ hash_node_t *create_node(const char *key, const char *value)
 	pair = malloc(sizeof(hash_node_t));
 	if (pair == NULL)
 		return (NULL);
-
 	pair->key = malloc(strlen(key) + 1);
 	if (pair->key == NULL)
+	{
+		free(pair);
 		return (NULL);
-
+	}
 	pair->value = malloc(strlen(value) + 1);
 	if (pair->value == NULL)
+	{
+		free(pair->key);
+		free(pair);
 		return (NULL);
-
+	}
 	strcpy(pair->key, key);
 	strcpy(pair->value, value);
 	return (pair);
@@ -57,7 +61,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		return (0);
 
 	index = key_index((const unsigned char *)key, ht->size);
-	if (index >= ht->size)
+	if (index > ht->size)
 		return (0);
 
 	current_index_item = ht->array[index];
@@ -68,6 +72,9 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		if (strcmp(current_index_item->key, key) == 0)
 		{
 			strcpy(ht->array[index]->value, value);
+			free(pair->key);
+			free(pair->value);
+			free(pair);
 			return (1);
 		}
 		else
