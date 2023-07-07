@@ -62,21 +62,16 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 	current_index_item = ht->array[index];
 	if (current_index_item == NULL)
-	{
-		printf("Found an empty array idex\n");
 		ht->array[index] = pair;
-	}
 	else
 	{
 		if (strcmp(current_index_item->key, key) == 0)
 		{
-			printf("found a duplicate\n");
 			strcpy(ht->array[index]->value, value);
 			return (1);
 		}
 		else
 		{
-			printf("collision found\n");
 			pair->next = current_index_item;
 			current_index_item = pair;
 		}
