@@ -66,23 +66,24 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		return (0);
 	current_index_item = ht->array[index];
 	if (current_index_item == NULL)
-		ht->array[index] = pair;
+		current_index_item = pair;
 	else
 	{
-		if (strcmp(current_index_item->key, _key) == 0)
+		while (current_index_item != NULL)
 		{
-			free(current_index_item->value);
-			strcpy(ht->array[index]->value, _value);
-			free(pair->key);
-			free(pair->value);
-			free(pair);
-			return (1);
+			if (strcmp(current_index_item->key, _key) == 0)
+			{
+				free(current_index_item->value);
+				strcpy(current_index_item->value, _value);
+				free(pair->key);
+				free(pair->value);
+				free(pair);
+				return (1);
+			}
+			current_index_item = current_index_item->next;
 		}
-		else
-		{
-			pair->next = current_index_item;
-			current_index_item = pair;
-		}
+		pair->next = current_index_item;
+		current_index_item = pair;
 	}
 	return (1);
 }
