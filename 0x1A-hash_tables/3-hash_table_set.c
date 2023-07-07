@@ -12,7 +12,7 @@ hash_node_t *create_node(const char *key, const char *value)
 {
 	hash_node_t *pair;
 
-	if (key == NULL)
+	if (!key || !value)
 		return (NULL);
 
 	pair = malloc(sizeof(hash_node_t));
@@ -48,19 +48,23 @@ hash_node_t *create_node(const char *key, const char *value)
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	unsigned long int index;
+	const char *_key, *_value;
 	hash_node_t *current_index_item;
 	hash_node_t *pair;
 
-	if (!ht || !key)
+	if (!ht || !key || !value || !ht->array)
 		return (0);
 	if (strlen(key) == 0)
 		return (0);
 
-	pair = create_node(key, value);
+	_key = strdup(key);
+	_value = strdup(value);
+
+	pair = create_node(_key, _value);
 	if (pair == NULL)
 		return (0);
 
-	index = key_index((const unsigned char *)key, ht->size);
+	index = key_index((const unsigned char *)_key, ht->size);
 	if (index > ht->size)
 		return (0);
 
@@ -69,10 +73,10 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		ht->array[index] = pair;
 	else
 	{
-		if (strcmp(current_index_item->key, key) == 0)
+		if (strcmp(current_index_item->key, _key) == 0)
 		{
 			free(current_index_item->value);
-			strcpy(ht->array[index]->value, value);
+			strcpy(ht->array[index]->value, _value);
 			free(pair->key);
 			free(pair->value);
 			free(pair);
