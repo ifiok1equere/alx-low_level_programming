@@ -49,8 +49,8 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	unsigned long int index;
 	const char *_key, *_value;
-	hash_node_t *current_index_item;
 	hash_node_t *pair;
+	hash_node_t *ptr;
 
 	if (!ht || !key || !value || !ht->array)
 		return (0);
@@ -62,28 +62,28 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	if (pair == NULL)
 		return (0);
 	index = key_index((const unsigned char *)_key, ht->size);
-	if (index > ht->size)
+	if (index >= ht->size)
 		return (0);
-	current_index_item = ht->array[index];
-	if (current_index_item == NULL)
-		current_index_item = pair;
+	ptr = ht->array[index];
+	if (ptr == NULL)
+		ptr = pair;
 	else
 	{
-		while (current_index_item != NULL)
+		while (ptr != NULL)
 		{
-			if (strcmp(current_index_item->key, _key) == 0)
+			if (strcmp(ptr->key, _key) == 0)
 			{
-				free(current_index_item->value);
-				strcpy(current_index_item->value, _value);
+				free(ptr->value);
+				strcpy(ptr->value, _value);
 				free(pair->key);
 				free(pair->value);
 				free(pair);
 				return (1);
 			}
-			current_index_item = current_index_item->next;
+			ptr = ptr->next;
 		}
-		pair->next = current_index_item;
-		current_index_item = pair;
+		pair->next = ht->array[index];
+		ht->array[index] = pair;
 	}
 	return (1);
 }
