@@ -1,5 +1,4 @@
 #include "hash_tables.h"
-
 /**
  * create_node - Function creates a node for key/value pair
  *
@@ -7,7 +6,6 @@
  * @value: Associated value with key.
  * Return: node for succes, NULL for failure.
  */
-
 hash_node_t *create_node(const char *key, const char *value)
 {
 	hash_node_t *pair;
@@ -35,7 +33,6 @@ hash_node_t *create_node(const char *key, const char *value)
 	strcpy(pair->value, value);
 	return (pair);
 }
-
 /**
  * hash_table_set - Function adds an element to a hash table
  *
@@ -44,36 +41,35 @@ hash_node_t *create_node(const char *key, const char *value)
  * @value: Associated value with key.
  * Return: 1 for success, 0 for failure.
  */
-
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	unsigned long int index;
-	const char *_key, *_value;
-	hash_node_t *pair;
-	hash_node_t *ptr;
+	const char *_value;
+	hash_node_t *pair, *ptr;
 
 	if (!ht || !key || !value || !ht->array)
 		return (0);
 	if (strlen(key) == 0)
 		return (0);
-	_key = strdup(key);
 	_value = strdup(value);
-	pair = create_node(_key, _value);
+	pair = create_node(key, _value);
 	if (pair == NULL)
 		return (0);
-	index = key_index((const unsigned char *)_key, ht->size);
+	index = key_index((const unsigned char *)key, ht->size);
 	if (index >= ht->size)
 		return (0);
+	/* printf("%p\n", (void *)ht->array[index]); */
 	ptr = ht->array[index];
 	if (ptr == NULL)
-		ptr = pair;
+	{
+		ht->array[index] = pair;
+	}
 	else
 	{
 		while (ptr != NULL)
 		{
-			if (strcmp(ptr->key, _key) == 0)
+			if (strcmp(ptr->key, key) == 0)
 			{
-				free(ptr->value);
 				strcpy(ptr->value, _value);
 				free(pair->key);
 				free(pair->value);
@@ -84,6 +80,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		}
 		pair->next = ht->array[index];
 		ht->array[index] = pair;
+		/* printf("%s: %s\n", pair->key, pair->value); */
 	}
 	return (1);
 }
