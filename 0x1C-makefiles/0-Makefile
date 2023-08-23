@@ -3,7 +3,6 @@
 # target: dependencies
 # 	action
 
-
 all: school
 
 school: main.c school.c
