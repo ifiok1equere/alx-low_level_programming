@@ -30,7 +30,7 @@ fclean:
 	$(RM) *~ $(NAME)
 	$(RM) main.o school.o
 
-re: fclean all
+re: oclean all
 
 
 $(NAME): $(OBJ)
