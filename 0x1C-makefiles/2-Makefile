@@ -10,21 +10,15 @@ CC=gcc
 SRC=main.c school.c
 
 # OBJ will be the object files to be used
-OBJ=main.o school.o
+OBJ=$(SRC:.c=.o)
 
-# SRC will be the source cde files to be used
+# NAME will be the executable file to be used
 NAME=school
 
 all: $(NAME)
 
-school: $(OBJ)
-	$(CC) $(OBJ) -o $(NAME)
+$(NAME): $(OBJ)
+	$(CC) -o $@ $^
 
-main.o: $(SRC) m.h
-	$(CC) -c $(SRC)
-
-school.o: $(SRC) m.h
-	$(CC) -c $(SRC)
-
-clean:
-	rm -rf *.o school
+%.o: %.c
+	$(CC) -c $^ -o $@
