@@ -1,0 +1,37 @@
+# _*_ Makefile _*_
+
+# target: dependencies
+#       action
+
+# CC will be the compiler to be used
+CC = gcc
+
+# SRC will be the source code files to be used
+SRC = main.c school.c
+
+# OBJ will be the object files to be used
+OBJ = $(SRC:.c=.o)
+
+# NAME will be the executable file to be used
+NAME = school
+
+# RM will be the program that deletes files
+RM = rm -f
+
+all: $(NAME)
+
+clean:
+	$(RM) *~ $(NAME)
+
+oclean:
+	$(RM) main.o school.o
+
+fclean:
+	$(RM) *~ $(NAME)
+	$(RM) main.o school.o
+
+re: fclean all
+
+
+$(NAME): $(OBJ)
+	$(CC) $(OBJ) -o $(NAME)
