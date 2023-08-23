@@ -21,14 +21,14 @@ RM = rm -f
 all: $(NAME)
 
 clean:
-	$(RM) *~ $(NAME)
+	$(RM) *.swp *~ $(NAME)
 
 oclean:
-	$(RM) main.o school.o
+	$(RM) $(OBJ)
 
 fclean:
 	$(RM) *~ $(NAME)
-	$(RM) main.o school.o
+	$(RM) $(OBJ)
 
 re: oclean all
 
