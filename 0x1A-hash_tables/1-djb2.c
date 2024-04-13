@@ -1,12 +1,11 @@
 #include "hash_tables.h"
 
 /**
- * hash_djb2 - implments a hash function
+ * hash_djb2 - Function implementing the djb2 algorithm
  *
- * @str: string to be hashed
- * Return: hash value
+ * @str: String/data to be hashed
+ * Return: hash code of data
  */
-
 unsigned long int hash_djb2(const unsigned char *str)
 {
 	unsigned long int hash;
@@ -17,5 +16,6 @@ unsigned long int hash_djb2(const unsigned char *str)
 	{
 		hash = ((hash << 5) + hash) + c; /* hash * 33 + c */
 	}
+
 	return (hash);
 }
